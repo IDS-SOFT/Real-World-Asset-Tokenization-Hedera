@@ -3,12 +3,28 @@
 
 # Hedera Token Service (HTS) demo
 
-This demo is a user interface written in Javascript (Vue.JS) to illustrate the use of the Hedera Token Service. When first launched, the demo will create three accounts as follows:
-* An account for the owner/admin of new tokens
+This demo is a user interface written in Javascript (Vue.JS) to illustrate the use of the Hedera Token Service. When first launched, the demo will create four accounts as follows:
+* An account for the owner/admin of new tokens - Issuer
 * Two accounts representing users (wallet holders) that will use the token, Alice and Bob
 * Another account representing a marketplace (escrow) for the purpose of holding tokens that have been offered for sale
 
 Each account is credited some hBar to fund their activity on Hedera.
+The accounts of Alice, Bob and marketplace are pre-associated with all tokens during token creation.
+This is done to enable seamless tranfers of tokens among all parties, for demo purpose.
+For a more practical implementation, an extra button / page for token association should be created that enables the same for any other user account.
+
+Here, the Issuer can create both fungible or non-fungible tokens based on their requirements.
+
+1. Fungible token :
+   - Fungible tokens can be created and hosted for tokenising assets like a company or a property like house etc.
+   - The tokens created so can be used for the purposes of ICO (Initial coin offering), STO (Stock / Loyalty), bond etc.
+   - The actual purpose of the token can be determined based on the parameters we select during token creation.
+   - Buyers can buy these tokens from the marketplace or directly from the issuer by paying the equivalent Hbar amount.
+
+2. Non-fungible token :
+   - NFT can be created for tokenising unique items like art, painting, some copyrighted content, a movie, a piece of music etc.
+   - NFT will be created as a single token only and minting / burning of this is not possible.
+   - It can only be sold to other users for equivalent Hbar amount.
 
 The demo enables you to:
 * Create tokens
